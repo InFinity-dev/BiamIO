@@ -1041,7 +1041,7 @@ def snake():
             img = cv2.flip(img, 1)
             hands = detector.findHands(img, flipType=False)
             img = detector.drawHands(img)
-
+            
             pointIndex = []
 
             if hands and user_move:
@@ -1049,7 +1049,8 @@ def snake():
                 pointIndex = lmList[8][0:2]
             if not user_move:
                 pointIndex = [start_cx, start_cy]
-
+            print(pointIndex)
+            print(user_move)
             if not user_move:
                 if user_number == 1:
                     start_cx += 5
