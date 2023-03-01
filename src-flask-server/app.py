@@ -994,7 +994,10 @@ def user_match(data):
     user_number = data
     socketio.emit("set_snake_url")
 
-
+@socketio.on('gameover_flag')
+def gameover_flag():
+    global game_over_for_debug
+    gameover_flag = True
 
 ########################################################################################################################
 ######################################## MAIN GAME ROUNTING ############################################################
