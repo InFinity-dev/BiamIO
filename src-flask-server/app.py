@@ -999,7 +999,7 @@ def user_match(data):
 @socketio.on('gameover_flag')
 def gameover_flag():
     global game_over_for_debug
-    gameover_flag = True
+    game_over_for_debug = True
 
 ########################################################################################################################
 ######################################## MAIN GAME ROUNTING ############################################################
