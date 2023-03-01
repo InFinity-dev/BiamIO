@@ -1049,8 +1049,7 @@ def snake():
                 pointIndex = lmList[8][0:2]
             if not user_move:
                 pointIndex = [start_cx, start_cy]
-            print(pointIndex)
-            print(user_move)
+            
             if not user_move:
                 if user_number == 1:
                     start_cx += 5
@@ -1343,6 +1342,6 @@ def hello_vue():
 ####################################### FLASK APP ARGUMENTS ############################################################
 
 if __name__ == "__main__":
-    socketio.run(app, host='localhost', port=5000, debug=False, allow_unsafe_werkzeug=True)
+    socketio.run(app, host='localhost', port=5000, debug=False, allow_unsafe_werkzeug=True, log_output=False)
 
 ########################################################################################################################
