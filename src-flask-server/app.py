@@ -1009,6 +1009,13 @@ def user_match(data):
     user_number = data
     socketio.emit("set_snake_url")
 
+<<<<<<< HEAD
+=======
+@socketio.on('gameover_flag')
+def gameover_flag():
+    global game_over_for_debug
+    game_over_for_debug = True
+>>>>>>> 3fd1f58868f630df95ad100838c6f4d69e3edd13
 
 ########################################################################################################################
 ######################################## MAIN GAME ROUNTING ############################################################
@@ -1050,7 +1057,7 @@ def snake():
             img = cv2.flip(img, 1)
             hands = detector.findHands(img, flipType=False)
             img = detector.drawHands(img)
-
+            
             pointIndex = []
 
             if hands and user_move:
@@ -1058,7 +1065,7 @@ def snake():
                 pointIndex = lmList[8][0:2]
             if not user_move:
                 pointIndex = [start_cx, start_cy]
-
+            
             if not user_move:
                 if user_number == 1:
                     start_cx += 5
@@ -1354,6 +1361,6 @@ def hello_vue():
 ####################################### FLASK APP ARGUMENTS ############################################################
 
 if __name__ == "__main__":
-    socketio.run(app, host='localhost', port=5000, debug=False, allow_unsafe_werkzeug=True)
+    socketio.run(app, host='localhost', port=5000, debug=False, allow_unsafe_werkzeug=True, log_output=False)
 
 ########################################################################################################################
