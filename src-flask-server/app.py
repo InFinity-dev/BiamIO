@@ -1009,13 +1009,10 @@ def user_match(data):
     user_number = data
     socketio.emit("set_snake_url")
 
-<<<<<<< HEAD
-=======
 @socketio.on('gameover_flag')
 def gameover_flag():
     global game_over_for_debug
     game_over_for_debug = True
->>>>>>> 3fd1f58868f630df95ad100838c6f4d69e3edd13
 
 ########################################################################################################################
 ######################################## MAIN GAME ROUNTING ############################################################
