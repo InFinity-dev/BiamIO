@@ -903,7 +903,7 @@ class SnakeGameClass:
         if a != 50 and b != 0:
             self.is_udp = False
 
-        print(f"connection MODE : {self.is_udp} / a = {a}, b = {b}")
+        # print(f"connection MODE : {self.is_udp} / a = {a}, b = {b}")
         socketio.emit('NetworkMode', {'UDP': self.is_udp})
 
     # 소멸자 소켓 bind 해제
@@ -1159,7 +1159,7 @@ class MultiGameClass:
                 self.opp_points = eval(decode_data)
                 self.udp_count = 0
             else:
-                print('----------else--------')
+                # print('----------else--------')
                 self.udp_count = 0
         except socket.timeout:
             self.udp_count += 1
@@ -1779,7 +1779,7 @@ def maze_play():
             # socketio.emit('maze_timer', {"minutes": remain_time // 60, "seconds": remain_time % 60})
             socketio.emit('maze_timer', {"remain_time": remain_time})
             if remain_time < 1:
-                print("game ended")
+                # print("game ended")
                 socketio.emit('gameover')
                 break
 

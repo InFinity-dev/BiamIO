@@ -28,12 +28,12 @@
         server_socket.on('waiting', function (data) {
             modem.play()
             $('#matching').css("display","block");
-            console.log("waiting...")
+            // console.log("waiting...")
             $("#isMatched").text("waiting...");
         });
 
         server_socket.on('matched', function (data) {
-            console.log("matched!");
+            // console.log("matched!");
             $("#isMatched").text("matched!!!");
             $("#alarm").text("user : " + data['user_number'] + " entered room : " + data['room_id']);
         });
@@ -146,7 +146,7 @@
         "http://" + document.domain + ":" + location.port
     );
     client_socket.on('selected_menu_type', function (data) {
-        console.log(data['menu_type'])
+        // console.log(data['menu_type'])
         if (data['menu_type'] == 1) {
             document.getElementById('joinButton').click();
         }
