@@ -1,8 +1,8 @@
-from src.maze import Maze
-from src.maze_viz import Visualizer
-from src.solver import DepthFirstBacktracker
-from src.solver import BiDirectional
-from src.solver import BreadthFirst
+from .maze import Maze
+from .maze_viz import Visualizer
+from .solver import DepthFirstBacktracker
+from .solver import BiDirectional
+from .solver import BreadthFirst
 
 
 class MazeManager(object):
