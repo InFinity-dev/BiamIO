@@ -1,6 +1,5 @@
 import random
 import math
-import time
 from .cell import Cell
 from .algorithm import depth_first_recursive_backtracker, binary_tree
 

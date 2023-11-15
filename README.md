@@ -1,4 +1,6 @@
-# BiamIO flask electron wrapped
+# BiamIO 
+
+![figure](/assets/BiamIO_Poster.png)  
 
 ## In Root Folder
 ```
